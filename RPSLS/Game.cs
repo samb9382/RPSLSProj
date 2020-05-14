@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,8 +11,8 @@ namespace RPSLS
     {
         Player playerOne;
         Player playerTwo;
-        public int playerOnePoint;
-        public int playerTwoPoint;
+        public int playerOneScore;
+        public int playerTwoScore;
 
         public void ChooseNumberPlayers()
         {
@@ -22,20 +23,42 @@ namespace RPSLS
                 case "1":
                     playerOne = new Human();
                     playerTwo = new Computer();
-                    // need to grab playerOne name
+                    playerOne.ChooseName();// need to grab playerOne name
                     break;
                 case "2":
                     playerOne = new Human();
                     playerTwo = new Human();
-                    //need to grab both player names
+                    playerOne.ChooseName();// need both names for players
+                    playerTwo.ChooseName();
                     break;
                 default:
                     Console.WriteLine("NOT AN OPTION");
                     ChooseNumberPlayers();
                     break;
 
-
             }
         }
+        public void PointWinner()
+        {
+            if (playerOne.gesture == playerTwo.gesture)
+            {
+                Console.WriteLine("tie");
+            }
+            else if ()
+            {
+                
+            }
+            
+
+           
+        }
+        public void RunGame()
+        {
+            Console.WriteLine("welcome to the game");
+            ChooseNumberPlayers();
+
+        }
+
     }
 }
+
