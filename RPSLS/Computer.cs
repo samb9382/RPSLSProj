@@ -8,11 +8,36 @@ namespace RPSLS
 {
     class Computer : Player
     {
-        public override void ChooseGesture() //random gesture for the computer
+        public string cpuInput;
+        public int randomGesture;
+
+        public override void ChooseGesture() //random gesture for the computer using int
         {
-            
-            
+             
             Random random = new Random();
+            randomGesture = random.Next(1, 5);
+
+            switch (randomGesture)
+            {
+                case 1:
+                    cpuInput = "Rock";
+                    break;
+                case 2:
+                    cpuInput = "paper";
+                    break;
+                case 3:
+                    cpuInput = "Scissors";
+                    break;
+                case 4:
+                    cpuInput = "Lizzard";
+                    break;
+                case 5:
+                    cpuInput = "Spock";
+                    break;
+
+      
+            }
+
         }
 
         public override void ChooseName()

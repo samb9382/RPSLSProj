@@ -8,5 +8,6 @@ namespace RPSLS
 {
     class Game
     {
+
     }
 }
