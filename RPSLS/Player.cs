@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Player
+    class Player //Parent class
     {
+        public string name;
+        public string gesture;
+        int score;
+
+
+        //abstract methods
+        public abstract void ChooseGesture();
+        public abstract void ChooseName();
+
+
     }
 }
