@@ -10,7 +10,7 @@ namespace RPSLS
     {
         public string name;
         public string gesture;
-        int score;
+        int numberOfWins;
 
 
         //abstract methods

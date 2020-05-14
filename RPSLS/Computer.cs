@@ -15,34 +15,16 @@ namespace RPSLS
         {
              
             Random random = new Random();
-            randomGesture = random.Next(1, 5);
-
-            switch (randomGesture)
-            {
-                case 1:
-                    cpuInput = "Rock";
-                    break;
-                case 2:
-                    cpuInput = "paper";
-                    break;
-                case 3:
-                    cpuInput = "Scissors";
-                    break;
-                case 4:
-                    cpuInput = "Lizzard";
-                    break;
-                case 5:
-                    cpuInput = "Spock";
-                    break;
-
-      
-            }
+            List<string> gestures = new List<string> {"ROCK", "PAPER", "SCISSORS", "LIZZARD", "SPOCK" };
+            gesture = gestures[random.Next(0, 4)];
+            Console.WriteLine(gesture);
+            Console.WriteLine(name + " choose " + gesture);
 
         }
 
         public override void ChooseName()
         {
-            name = "Computer AI";
+            name = "Computer";
         }
     }
 }

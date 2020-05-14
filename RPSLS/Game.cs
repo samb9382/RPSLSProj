@@ -8,6 +8,12 @@ namespace RPSLS
 {
     class Game
     {
+        int playerScore = 0;
+        int cpuScore = 0;
 
+        public void DetermineWinner()
+        {
+            
+        }
     }
 }
