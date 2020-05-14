@@ -17,11 +17,12 @@ namespace RPSLS
 
         public override void ChooseGesture() //display gesture choices
         {
-            Console.WriteLine("Choose a Gesture ROCK, PAPER, or SCiSSORS: ");
+            Console.WriteLine("Choose a Gesture ROCK, PAPER, or SCISSORS: ");
             playerGesture = Console.ReadLine();
             playerGesture = playerGesture.ToUpper();
+            Console.WriteLine(name + " chose " + playerGesture);
 
-            UI
+           
             
 
         }
