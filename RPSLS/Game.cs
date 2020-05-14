@@ -46,7 +46,14 @@ namespace RPSLS
             }
             else if (playerOne.gesture == "ROCK" && playerTwo.gesture == "SCISSORS") || (playerOne.gesture == "ROCK" && playerTwo.gesture == "LIZZARD") || (playerOne.gesture == "PAPER" && playerTwo.gesture == "ROCK") || (playerOne.gesture == "PAPER" && playerTwo.gesture == "SPOCK") || (playerOne.gesture == "SCISSORS" && playerTwo.gesture == "PAPER") || (playerOne.gesture == "SCISSORS" && playerTwo.gesture == "LIZARD") || (playerOne.gesture == "SPOCK" && playerTwo.gesture == "SCISSORS") || (playerOne.gesture == "SPOCK" && playerTwo.gesture == "ROCK") || (playerOne.gesture == "LIZARD" && playerTwo.gesture == "SPOCK") || (playerOne.gesture == "LIZARD" && playerTwo.gesture == "PAPER"); 
             {
-                Console.WriteLine("Player One Wins");
+                Console.WriteLine("Player One Wins this round"); //add name to console
+                //playerOne point ++
+
+            }
+            else
+            {
+                Console.WriteLine("Player Two Wins this round"); //add name to console
+                //playerTwo point ++
             }
             
 
