@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Computer
+    class Computer : Player
     {
+        public override void ChooseGesture() //random gesture for the computer
+        {
+            
+            
+            Random random = new Random();
+        }
+
+        public override void ChooseName()
+        {
+            name = "Computer AI";
+        }
     }
 }
