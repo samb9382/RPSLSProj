@@ -22,8 +22,8 @@ namespace RPSLS
             Console.WriteLine("First player to 2 wins is the winner! Good Luck!");
         }
 
-        
-        
+
+
         public void ChooseNumberPlayers()
         {
             Console.WriteLine("Type 1 for single player option  OR Type 2 for 2 players");
@@ -50,30 +50,65 @@ namespace RPSLS
         }
         public void PointWinner()
         {
+
+
             if (playerOne.gesture == playerTwo.gesture)
             {
                 Console.WriteLine("It's a tie");
             }
-            else if (playerOne.gesture == "ROCK" && playerTwo.gesture == "SCISSORS") || (playerOne.gesture == "ROCK" && playerTwo.gesture == "LIZZARD") || (playerOne.gesture == "PAPER" && playerTwo.gesture == "ROCK") || (playerOne.gesture == "PAPER" && playerTwo.gesture == "SPOCK") || (playerOne.gesture == "SCISSORS" && playerTwo.gesture == "PAPER") || (playerOne.gesture == "SCISSORS" && playerTwo.gesture == "LIZARD") || (playerOne.gesture == "SPOCK" && playerTwo.gesture == "SCISSORS") || (playerOne.gesture == "SPOCK" && playerTwo.gesture == "ROCK") || (playerOne.gesture == "LIZARD" && playerTwo.gesture == "SPOCK") || (playerOne.gesture == "LIZARD" && playerTwo.gesture == "PAPER"); 
+            else if ((playerOne.gesture == "ROCK" && playerTwo.gesture == "SCISSORS") || (playerOne.gesture == "ROCK" && playerTwo.gesture == "LIZZARD") || (playerOne.gesture == "PAPER" && playerTwo.gesture == "ROCK") || (playerOne.gesture == "PAPER" && playerTwo.gesture == "SPOCK") || (playerOne.gesture == "SCISSORS" && playerTwo.gesture == "PAPER") || (playerOne.gesture == "SCISSORS" && playerTwo.gesture == "LIZARD") || (playerOne.gesture == "SPOCK" && playerTwo.gesture == "SCISSORS") || (playerOne.gesture == "SPOCK" && playerTwo.gesture == "ROCK") || (playerOne.gesture == "LIZARD" && playerTwo.gesture == "SPOCK") || (playerOne.gesture == "LIZARD" && playerTwo.gesture == "PAPER"))
             {
                 Console.WriteLine("Player One Wins this round"); //add name to console
-                //playerOne point ++
-
+                playerOneScore++;
             }
+
+
             else
             {
                 Console.WriteLine("Player Two Wins this round"); //add name to console
-                //playerTwo point ++
+                playerTwoScore++;
             }
-            
-
-           
         }
+
+                public void GetPoint()
+            {
+                Console.WriteLine($"{playerOne.name} has {playerOneScore} point");
+                Console.WriteLine($"{playerTwo.name} has {playerTwoScore} point");
+            }
+
+        public void WinGame()
+        {
+            int score = 0;
+            while (score < 2)
+            {
+                if (playerOneScore > 1)
+                {
+                    Console.WriteLine("Player One Wins");
+                    Console.WriteLine("The Game is Over");
+
+
+                }
+                else if (playerTwoScore > 1)
+                {
+                    Console.WriteLine("Player Two Wins");
+                    Console.WriteLine("The Game is Over");
+
+                }
+
+            }
+
+        }
+
+
         public void RunGame()
         {
-            Console.WriteLine("welcome to the game!");
+            Console.WriteLine("welcome!");
             DisplayRules();
             ChooseNumberPlayers();
+            playerOne.ChooseGesture();
+            playerTwo.ChooseGesture();
+            PointWinner();
+            WinGame();
 
         }
 
