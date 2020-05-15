@@ -70,34 +70,40 @@ namespace RPSLS
             }
         }
 
-                public void GetPoint()
-            {
-                Console.WriteLine($"{playerOne.name} has {playerOneScore} point");
-                Console.WriteLine($"{playerTwo.name} has {playerTwoScore} point");
-            }
+        public void GetPoint()
+        {
+            Console.WriteLine($"{playerOne.name} has {playerOneScore} point");
+            Console.WriteLine($"{playerTwo.name} has {playerTwoScore} point");
+        }
 
         public void WinGame()
         {
-            int score = 0;
-            while (score < 2)
+
+
+            if (playerOneScore > 1)
             {
-                if (playerOneScore > 1)
-                {
-                    Console.WriteLine("Player One Wins");
-                    Console.WriteLine("The Game is Over");
+                Console.WriteLine("Player One Wins");
+                Console.WriteLine("The Game is Over");
 
 
-                }
-                else if (playerTwoScore > 1)
-                {
-                    Console.WriteLine("Player Two Wins");
-                    Console.WriteLine("The Game is Over");
-
-                }
+            }
+            else if (playerTwoScore > 1)
+            {
+                Console.WriteLine("Player Two Wins");
+                Console.WriteLine("The Game is Over");
 
             }
 
+
         }
+
+        public void RestartGame()
+        {
+            Console.WriteLine("Thanks for playing. Do you want to replay the game? Type YES or NO.");
+
+
+        }
+
 
 
         public void RunGame()
@@ -105,10 +111,16 @@ namespace RPSLS
             Console.WriteLine("welcome!");
             DisplayRules();
             ChooseNumberPlayers();
-            playerOne.ChooseGesture();
-            playerTwo.ChooseGesture();
-            PointWinner();
+            while (playerOneScore < 2 && playerTwoScore < 2)
+            {
+                playerOne.ChooseGesture();
+                playerTwo.ChooseGesture();
+
+                PointWinner();
+                GetPoint();
+            }
             WinGame();
+            RestartGame();
 
         }
 

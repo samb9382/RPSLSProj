@@ -18,5 +18,6 @@ namespace RPSLS
         public abstract void ChooseName();
 
 
+
     }
 }
