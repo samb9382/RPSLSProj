@@ -14,6 +14,16 @@ namespace RPSLS
         public int playerOneScore;
         public int playerTwoScore;
 
+        public void DisplayRules()
+        {
+            Console.WriteLine("Welcome to Rock Paper Scissors Lizzard Spock.");
+            Console.WriteLine("You can play vs a friend or against a computer.");
+            Console.WriteLine("In order to win, Paper disproves spock and covers rock. scissors cuts paper and decapitates lizzard. Spock smashes scissors and vaporizes rock. Lizzard poisons spock and eats paper. Rock crushes scissors and crushes lizzard.");
+            Console.WriteLine("First player to 2 wins is the winner! Good Luck!");
+        }
+
+        
+        
         public void ChooseNumberPlayers()
         {
             Console.WriteLine("Type 1 for single player option  OR Type 2 for 2 players");
@@ -61,7 +71,8 @@ namespace RPSLS
         }
         public void RunGame()
         {
-            Console.WriteLine("welcome to the game");
+            Console.WriteLine("welcome to the game!");
+            DisplayRules();
             ChooseNumberPlayers();
 
         }
