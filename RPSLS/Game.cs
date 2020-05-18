@@ -100,6 +100,22 @@ namespace RPSLS
         public void RestartGame()
         {
             Console.WriteLine("Thanks for playing. Do you want to replay the game? Type YES or NO.");
+            string restartGame = Console.ReadLine();
+            restartGame = restartGame.ToUpper();
+            switch (restartGame)
+            {
+                case "YES":
+                    RunGame();
+                    break;
+                case "NO":
+                    Console.WriteLine("Have a good day!");
+                    break;
+                default:
+                    Console.WriteLine("Not a valid option");
+                    RestartGame();
+                    break;
+
+            }
 
 
         }

@@ -17,7 +17,7 @@ namespace RPSLS
 
         public override void ChooseGesture() //display gesture choices
         {
-            Console.WriteLine("Choose a Gesture ROCK, PAPER, or SCISSORS: ");
+            Console.WriteLine("Choose a Gesture ROCK, PAPER, SCISSORS, LIZZARD, or SPOCK: ");
             gesture = Console.ReadLine();
             gesture = gesture.ToUpper(); //convert string to upper case
             Console.WriteLine(name + " chose " + gesture);
